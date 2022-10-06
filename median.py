@@ -9,4 +9,15 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
+
+mean = 0
+numbersLen = len(numbers)
+numbers.sort()
+if numbersLen > 0:
+    if numbersLen % 2 == 0:
+     mean = (numbers[numbersLen//2] + numbers[numbersLen//2-1]) /2
+    else:
+         mean = numbers[numbersLen//2]
+else: 
+    mean = numbers[numbersLen]
+print(mean)
